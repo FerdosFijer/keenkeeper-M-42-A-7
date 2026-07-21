@@ -10,7 +10,7 @@ const Navbar = () => {
       <NavLink to={"/"} className={({isActive}) => `btn btn-ghost font-semibold mr-1 ${isActive ? "bg-teal-800 border border-teal-800 text-white" : "text-slate-500"}` }><RiHome2Line /> Home</NavLink>
     </li>
     <li>
-      <NavLink to={"/bc"}className={({isActive}) => `btn btn-ghost font-semibold mr-1 ${isActive ? "bg-teal-800 border border-teal-800 text-white" : "text-slate-500"}`}> <LuClock3 /> Timelne</NavLink>
+      <NavLink to={"/timeline"}className={({isActive}) => `btn btn-ghost font-semibold mr-1 ${isActive ? "bg-teal-800 border border-teal-800 text-white" : "text-slate-500"}`}> <LuClock3 /> Timelne</NavLink>
     </li>
     <li>
       <NavLink to={"/sc"}className={ ({isActive}) => `font-semibold mr-1 ${isActive ? "btn btn-ghost bg-teal-800 border border-teal-800 text-white" : "text-slate-500"}`}><TfiStatsUp /> Stats</NavLink>

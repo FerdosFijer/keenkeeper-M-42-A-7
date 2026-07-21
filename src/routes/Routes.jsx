@@ -1,6 +1,8 @@
 import { createBrowserRouter } from "react-router";
 import MainLayout from "../layout/MainLayout";
 import HomePage from "../pages/HomePage";
+import FriendDetails from "../pages/friendDetails/FriendDetails";
+import TimelinePage from "../pages/timelinePage/TimelinePage";
 
 export const router = createBrowserRouter([
   {
@@ -10,6 +12,15 @@ export const router = createBrowserRouter([
         {
             index:true,
             element: <HomePage/>
+        },
+        {
+            path:"/timeline",
+            Component:TimelinePage,
+        },
+        {
+            path:"/friednDetails/:id",
+            loader:() => fetch('/friendData.json'),
+            Component: FriendDetails,
         },
     ],
   },
