@@ -6,11 +6,7 @@ const FriendCard = ({ friend }) => {
     <NavLink to={`/friednDetails/${friend.id}`} className="card bg-base-100 shadow-sm">
       <div className="card bg-base-100  shadow-sm">
         <figure className="rounded-full w-40 h-40 mx-auto mt-4">
-          <img
-            src={friend.picture}
-            alt="Shoes"
-            className="rounded-xl"
-          />
+          <img src={friend.picture} alt="Shoes" className="rounded-xl"/>
         </figure>
         <div className="card-body items-center text-center">
           <h2 className="card-title">{friend.name}</h2>
@@ -23,7 +19,7 @@ const FriendCard = ({ friend }) => {
                     })
                 }
             </div>
-            <button className="btn btn-warning btn-sm rounded-full px-6">{friend.status}</button>
+            <button className={`btn btn-sm rounded-full px-6 ${friend.status === "overdue" ? "bg-red-600 text-white" : "bg-green-800 text-white"}`}>{friend.status}</button>
         
         </div>
       </div>
