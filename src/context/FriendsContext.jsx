@@ -5,9 +5,13 @@ export const FriendContext = createContext();
 const FriendsContext = ({ children }) => {
   const [callSmsVideoList, setCallSmsVideoList] = useState([]);
 
-  const handleCallSmsVideo = (singleFriend) => {
-    // console.log(singleFriend);
-    setCallSmsVideoList([...callSmsVideoList, singleFriend]);
+  const handleCallSmsVideo = (singleFriend, action) => {
+    /* console.log(singleFriend); */
+    const newItem = { ...singleFriend, action}
+    
+
+    setCallSmsVideoList([...callSmsVideoList, newItem]);
+    /* console.log(singleFriend, action, newItem); */
   };
 
   const data = {handleCallSmsVideo, callSmsVideoList, setCallSmsVideoList};

@@ -25,7 +25,7 @@ const FriendDetails = () => {
   } = singleFriend;
 
     const {handleCallSmsVideo, callSmsVideoList} =useContext(FriendContext);
-    // console.log(handleCallSmsVideo, callSmsVideoList, "friendContext1");
+    /* console.log(handleCallSmsVideo, callSmsVideoList, "friendContext1"); */
 
  
 
@@ -134,7 +134,7 @@ const FriendDetails = () => {
             <div className="grid grid-cols-3 gap-4">
               <div
                 className="card border"
-                onClick={() => handleCallSmsVideo(singleFriend)}
+                onClick={() => handleCallSmsVideo(singleFriend, "call")}
               >
                 <div className="card-body items-center">
                   <FiPhoneCall className="text-3xl" />
@@ -144,7 +144,7 @@ const FriendDetails = () => {
 
               <div
                 className="card border"
-                onClick={() => handleCallSmsVideo(singleFriend)}
+                onClick={() => handleCallSmsVideo(singleFriend, "Text")}
               >
                 <div className="card-body items-center">
                   <BsChatLeftText className="text-3xl" />
@@ -154,7 +154,7 @@ const FriendDetails = () => {
 
               <div
                 className="card border"
-                onClick={() => handleCallSmsVideo(singleFriend)}
+                onClick={() => handleCallSmsVideo(singleFriend, "Video")}
               >
                 <div className="card-body items-center">
                   <IoVideocamOutline className="text-3xl" />
